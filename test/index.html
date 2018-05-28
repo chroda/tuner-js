@@ -1,49 +1,14 @@
-<script>
-  window.AudioContext = window.AudioContext || window.webkitAudioContext;
-  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
-
-  window.addEventListener('load', record(new AudioContext()), false);
-
-  function record(context) {
-    navigator.getUserMedia({ audio: true }, sound, error);
-
-    function sound (stream) {
-      var analyser = context.createAnalyser();
-      analyser.smoothingTimeConstant = 0.2;
-      analyser.fftSize = 1024;
-
-      var node = context.createScriptProcessor(2048, 1, 1);
-
-      var values = 0;
-      var average;
-      node.onaudioprocess = function () {
-        // bitcount is fftsize / 2
-        var array = new Uint8Array(analyser.frequencyBinCount);
-        analyser.getByteFrequencyData(array);
-
-        var length = array.length;
-
-
-        for (var i = 0; i < length; i++) {
-          values += array[i];
-        }
-
-        average = values / length;
-        console.log(average);
-        average = values = 0;
-      };
-
-      var input = context.createMediaStreamSource(stream);
-
-      input.connect(analyser);
-      analyser.connect(node);
-      node.connect(context.destination);
-
-      // return sound to browser
-      // input.connect(context.destination);
-    }
-
-    function error () { console.log(arguments); }
-  }
-</script>
-<div>0</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="test.css" />
+  <script src="test.js"></script>
+</head>
+<body>
+  <div id="outputEl">0</div>
+</body>
+</html>

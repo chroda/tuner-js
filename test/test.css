@@ -1,0 +1,23 @@
+body{
+  margin:0;
+  display: flex;
+  align-items: center;
+  height: -webkit-fill-available;
+  justify-content: center;
+  background-color: darkred;
+}
+#outputEl{
+  background-color: whitesmoke;
+  font-size: 30px;
+  box-shadow: 0px 0px 100px 100px whitesmoke;
+  padding: 10px;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-family: monospace;
+  color: darkred;
+  font-weight: bolder;
+}
+
