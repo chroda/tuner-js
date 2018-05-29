@@ -2,7 +2,6 @@ window.AudioContext = window.AudioContext || window.webkitAudioContext;
   navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
 
   window.addEventListener('load', record(new AudioContext()), false);
-  var outputEl = document.getElementById("outputEl");
 
   function record(context) {
     navigator.getUserMedia({ audio: true }, sound, error);
@@ -22,7 +21,6 @@ window.AudioContext = window.AudioContext || window.webkitAudioContext;
         analyser.getByteFrequencyData(array);
 
         var length = array.length;
-
 
         for (var i = 0; i < length; i++) {
           values += array[i];
