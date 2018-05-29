@@ -9,3 +9,5 @@ https://willianjusten.com.br/braziljs-16/#/
 https://guitar-tuner.appspot.com/
 
 https://github.com/googlearchive/guitar-tuner/blob/master/src/scripts/guitartuner-core.js
+
+https://hackernoon.com/a-web-audio-experiment-666743e16679
