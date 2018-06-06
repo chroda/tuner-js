@@ -1,4 +1,8 @@
-# tuner-js
+# [tuner-js](https://github.com/chroda/tuner-js)
+
+## Actual tests in progress
+
+- [study in progress](./study/)
 
 ## Research links
 - https://www.youtube.com/watch?v=HnQQL8Q9upA
@@ -8,7 +12,3 @@
 - https://guitar-tuner.appspot.com/
 - https://github.com/googlearchive/guitar-tuner/blob/master/src/scripts/guitartuner-core.js
 - https://hackernoon.com/a-web-audio-experiment-666743e16679
-
-## Actual tests in progress
-
-- [study in progress](./study/)
