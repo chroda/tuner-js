@@ -1,4 +1,4 @@
-# [tuner-js](https://github.com/chroda/tuner-js)
+# [tuner-js](https://github.com/chroda/tuner-js) 🎸🎶
 
 ## Actual tests in progress
 
