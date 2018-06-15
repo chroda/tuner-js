@@ -1,3 +1,6 @@
+
+<canvas id="canvas" width="1024" height="300"></canvas>
+
 <script>
   const audioContext = new window.AudioContext();
   const analyser = audioContext.createAnalyser();
@@ -10,10 +13,12 @@
 
   const dataArray = new Uint8Array(analyser.frequencyBinCount);
 
-  const canvasContext = refs.canvas.getContext('2d'); // a canvas I have in my HTML
+  const canvasContext = document.getElementById('canvas').getContext('2d');
   canvasContext.fillStyle = 'firebrick';
 
   setTimeout(() => {
+    console.log(dataArray);
+
     analyser.getByteTimeDomainData(dataArray);
 
     dataArray.forEach((item, i) => {
@@ -22,4 +27,3 @@
   }, 300);
 </script>
 
-<canvas data-ref="canvas" width="1024" height="300"></canvas>
