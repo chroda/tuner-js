@@ -7,4 +7,19 @@
     stream => audioContext.createMediaStreamSource(stream).connect(analyser),
     err => console.log(err)
   );
+
+  const dataArray = new Uint8Array(analyser.frequencyBinCount);
+
+  const canvasContext = refs.canvas.getContext('2d'); // a canvas I have in my HTML
+  canvasContext.fillStyle = 'firebrick';
+
+  setTimeout(() => {
+    analyser.getByteTimeDomainData(dataArray);
+
+    dataArray.forEach((item, i) => {
+      canvasContext.fillRect(i, item, 1, 1);
+    });
+  }, 300);
 </script>
+
+<canvas data-ref="canvas" width="1024" height="300"></canvas>
