@@ -1,0 +1,10 @@
+<script>
+  const audioContext = new window.AudioContext();
+  const analyser = audioContext.createAnalyser();
+
+  navigator.getUserMedia(
+    {audio: true},
+    stream => audioContext.createMediaStreamSource(stream).connect(analyser),
+    err => console.log(err)
+  );
+</script>
