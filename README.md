@@ -12,3 +12,5 @@
 - https://guitar-tuner.appspot.com/
 - https://github.com/googlearchive/guitar-tuner/blob/master/src/scripts/guitartuner-core.js
 - https://hackernoon.com/a-web-audio-experiment-666743e16679
+- https://sight-reader.herokuapp.com/
+- https://github.com/davidgilbertson/sight-reader/
