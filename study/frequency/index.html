@@ -16,14 +16,21 @@
   const canvasContext = document.getElementById('canvas').getContext('2d');
   canvasContext.fillStyle = 'firebrick';
 
-  setTimeout(() => {
+  console.log(canvasContext);
+
+
+  setInterval(() => {
     console.log(dataArray);
 
     analyser.getByteTimeDomainData(dataArray);
-
     dataArray.forEach((item, i) => {
       canvasContext.fillRect(i, item, 1, 1);
     });
-  }, 300);
+  }, 500);
 </script>
+<style>
+  html,body{
+    margin: 0;
+  }
+</style>
 
