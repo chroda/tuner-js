@@ -1,6 +1,4 @@
-
 <canvas id="canvas" width="1024" height="300"></canvas>
-
 <script>
   const audioContext = new window.AudioContext();
   const analyser = audioContext.createAnalyser();
@@ -30,6 +28,10 @@
         lastPos = i;
 
         const hertz = 1 / (elapsedSteps / 44100);
+
+        console.log(hertz);
+
+
         pitchSamples.push(hertz); // an array of every pitch encountered
       }
 
